@@ -133,7 +133,7 @@ Tests are written using `jest` and `supertest`.
 To run all tests:
 
 ```bash
-npm run test
+npm test
 ```
 
 ---
@@ -176,7 +176,8 @@ npx prisma migrate dev
 ### 4. Run the development server
 
 ```bash
-npm run dev
+cd backend/src
+nodemon index.ts
 ```
 
 Server should now be running at `http://localhost:3001`
