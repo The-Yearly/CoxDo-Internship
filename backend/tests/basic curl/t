@@ -1,0 +1,78 @@
+curl -X POST http://localhost:3001/api/inventory \
+  -H "Content-Type: application/json" \
+  -d '{
+    "user_id": 1,
+    "item": {
+      "name": "Fresh Milk",
+      "category": "Dairy",
+      "stock": 120,
+      "min_stock": 20,
+      "price": 42.50,
+      "status": "Available",
+      "supplier": "Amul Ltd.",
+      "expiry_date": "2025-08-10T00:00:00.000Z",
+      "temperature": 4.0
+    }
+  }'
+
+
+  curl -X POST http://localhost:3001/api/inventory \
+  -H "Content-Type: application/json" \
+  -d '{
+    "user_id": 1,
+    "item": {
+      "name": "Oil",
+      "category": "Dairy",
+      "stock": 120,
+      "min_stock": 20,
+      "price": 42.50,
+      "status": "Available",
+      "supplier": "Amul Ltd.",
+      "expiry_date": "2025-08-10T00:00:00.000Z",
+      "temperature": 23.0
+    }
+  }'
+
+
+  curl -X PUT http://localhost:3001/api/inventory/1 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "user_id": 1,
+    "item": {
+      "name": "Diary Milk",
+      "category": "Sweets",
+      "stock": 120,
+      "min_stock": 20,
+      "price": 42.50,
+      "status": "Available",
+      "supplier": "Amul Ltd.",
+      "expiry_date": "2025-08-10T00:00:00.000Z",
+      "temperature": 4.0
+    }
+  }'
+
+
+    curl -X DELETE http://localhost:3001/api/inventory/1 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "user_id": 2,
+    }
+  }'
+
+
+  curl -X POST http://localhost:3001/api/inventory \
+  -H "Content-Type: application/json" \
+  -d ' {
+      "user_id": 1,
+      "item": {
+        name: "Test Item",
+        price: 100,
+        min_stock: 5,
+        expiry_date: "2025-12-31",
+        status: "Available",
+        stock: 50,
+        supplier: "Test Supplier",
+        temperature: 22.0,
+        category: "Test Category",
+      },
+    }'

@@ -45,4 +45,5 @@ model ActivityLogs{
 model Users{
   id Int @id @default(autoincrement())
   name String
+  role String
 }

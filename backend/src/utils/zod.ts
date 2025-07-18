@@ -1,6 +1,6 @@
 import { z } from "zod";
 export const Inventory = z.object({
-  id: z.number(),
+  id: z.number().optional(),
   name: z.string(),
   category: z.string(),
   stock: z.number(),
@@ -8,7 +8,7 @@ export const Inventory = z.object({
   price: z.float64(),
   status: z.string(),
   supplier: z.string(),
-  expiry_date: z.date(),
+  expiry_date: z.string(),
   temperature: z.float64(),
 });
 
